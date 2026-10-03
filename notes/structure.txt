@@ -1,0 +1,19 @@
+lib/
+├── core/                  <-- Shared across the entire app
+│   ├── ui/                <-- Global components (e.g., BottomNav, PrimaryButton)
+│   ├── utils/             <-- Global utilities (e.g., DateFormatters, Theme)
+│   └── storage/           <-- Global Hive initialization and setup
+├── features/
+│   ├── daily_steps/       <-- Feature 1: Dashboard & Steps
+│   │   ├── screens/       <-- home_screen.dart
+│   │   ├── widgets/       <-- progress_ring.dart (Only used in Home)
+│   │   └── providers/     <-- Riverpod state for daily step targets
+│   ├── workouts/          <-- Feature 2: Logging Resistance Training
+│   │   ├── screens/       <-- log_workout_screen.dart
+│   │   ├── widgets/       <-- exercise_form_input.dart
+│   │   ├── models/        <-- workout_model.dart (Hive type adapters)
+│   │   └── providers/     <-- Riverpod state for saving/loading workouts
+│   └── stats/             <-- Feature 3: Analytics
+│       ├── screens/       <-- stats_screen.dart
+│       └── widgets/       <-- weekly_bar_chart.dart
+└── main.dart
