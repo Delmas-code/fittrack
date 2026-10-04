@@ -1,11 +1,11 @@
-import 'package:fittrack/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-// import models
+// import models and main nav
 // import 'features/workouts/models/workout_model.dart';
 // import 'features/daily_steps/models/step_model.dart';
+import 'core/ui/main_navigation_screen.dart';
 import 'package:fittrack/features/workouts/models/workout_model.dart';
 import 'package:fittrack/features/daily_steps/models/step_model.dart';
 
@@ -32,13 +32,13 @@ class FitnessApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Fitness App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'Inter',
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF2563EB)),
         scaffoldBackgroundColor: const Color(0xFFF4F7F9),
       ),
-      home: const Scaffold(
-        body: Center(child: Text('Data Layer Ready')),
-      ),
+      home: const MainNavigationScreen(),
     );
   }
 }

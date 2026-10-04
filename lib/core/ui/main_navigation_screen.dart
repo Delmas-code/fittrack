@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //screens
 import '../../features/daily_steps/screens/home_screen.dart';
 import '../../features/workouts/screens/log_workout_screen.dart';
+import '../../features/stats/screens/stats_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -17,6 +18,7 @@ class  _MainNavigationScreenState extends State<MainNavigationScreen> {
   final List<Widget> _screens = [
     const HomeScreen(),
     const LogWorkoutScreen(),
+    const StatsScreen(),
   ];
 
   @override
